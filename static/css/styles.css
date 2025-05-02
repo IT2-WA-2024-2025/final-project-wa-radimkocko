@@ -1,0 +1,40 @@
+.card-box {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #0d6efd;
+  }
+  
+  .results-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .result-item {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .result-item:last-child {
+    border-bottom: none;
+  }
+  
+  .sport-football {
+    color: #dc3545;
+  }
+  
+  .sport-hockey {
+    color: #198754;
+  }
+  
+  .sport-tennis {
+    color: #0d6efd; 
+  }
+  
