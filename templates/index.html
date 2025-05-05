@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
   </head>
   <body>
+    <img src="{{ url_for('static', filename='images/pozadi_hlavni.png') }}">
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">SportVýsledky</a>
+        <a class="navbar-brand" href="#">Sázej.to</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -24,6 +25,9 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Sporty</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Kontakt</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -31,16 +35,16 @@
 
     <header class="main-header">
       <h1>Sportovní Výsledky</h1>
-      <p>Sledujte aktuální výsledky oblíbených sportovních utkání</p>
+      <p>Stránka slouží k sledování výsledků jednotlivých sportů. Pro sledování více aktuálních zápasů přejděte na tabulku sporty.</p>
     </header>
 
     <div class="container my-5">
       <div class="latest-results card-box">
         <h2 class="section-title">Nejnovější Výsledky</h2>
         <ul class="results-list">
-          <li class="result-item sport-football">Fotbal: Sparta Praha 2 - 1 Slavia Praha</li>
-          <li class="result-item sport-hockey">Hokej: HC Kometa Brno 4 - 3 HC Oceláři Třinec</li>
-          <li class="result-item sport-tennis">Tenis: K. Muchová def. P. Kvitová 6-4, 6-3</li>
+          <li class="result sport-football">Fotbal: Sparta Praha 2 - 1 Slavia Praha</li>
+          <li class="result sport-hockey">Hokej: HC Kometa Brno 4 - 3 HC Oceláři Třinec</li>
+          <li class="result sport-tennis">Tenis: K. Muchová def. P. Kvitová 6-4, 6-3</li>
         </ul>
       </div>
     </div>
