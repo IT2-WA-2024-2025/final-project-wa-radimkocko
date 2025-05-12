@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Sporty{% endblock %}
+
+{% block content %}
+  <header class="main-header">
+    <h1>Sporty</h1>
+    <p>Zde najdete výsledky pro různé sporty. Vyberte si sport a sledujte aktuální zápasy a výsledky.</p>
+  </header>
+
+  <main>
+    <div class="container my-5">
+      <div class="card-box">
+        <h2 class="section-title">Fotbal</h2>
+        <ul class="results-list">
+          <li class="result sport-football">FC Barcelona 3 - 0 Real Madrid</li>
+          <li class="result sport-football">Bayern Mnichov 2 - 2 Borussia Dortmund</li>
+        </ul>
+      </div>
+
+      <div class="card-box">
+        <h2 class="section-title">Hokej</h2>
+        <ul class="results-list">
+          <li class="result sport-hockey">Toronto Maple Leafs 4 - 2 Boston Bruins</li>
+          <li class="result sport-hockey">New York Rangers 3 - 3 Chicago Blackhawks</li>
+        </ul>
+      </div>
+
+      <div class="card-box">
+        <h2 class="section-title">Tenis</h2>
+        <ul class="results-list">
+          <li class="result sport-tennis">N. Djokovic def. C. Alcaraz 7-5, 6-4</li>
+          <li class="result sport-tennis">I. Swiatek def. A. Sabalenka 6-3, 6-2</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+{% endblock %}

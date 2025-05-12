@@ -1,42 +1,14 @@
-<!doctype html>
-<html lang="cs">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sportovní Výsledky</title>
+{% extends "base.html" %}
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-  </head>
-  <body>
-    
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Sázej.to</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Domů</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sporty</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Kontakt</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+{% block title %}Sportovní Výsledky{% endblock %}
 
-    <header class="main-header">
-      <h1>Sportovní Výsledky</h1>
-      <p>Stránka slouží k sledování výsledků jednotlivých sportů. Pro sledování více aktuálních zápasů přejděte na tabulku sporty.</p>
-    </header>
+{% block content %}
+  <header class="main-header">
+    <h1>Sportovní Výsledky</h1>
+    <p>Stránka slouží k sledování výsledků jednotlivých sportů. Pro sledování více aktuálních zápasů přejděte na tabulku sporty.</p>
+  </header>
 
+  <main>
     <div class="container my-5">
       <div class="latest-results card-box">
         <h2 class="section-title">Nejnovější Výsledky</h2>
@@ -47,11 +19,5 @@
         </ul>
       </div>
     </div>
-
-    <footer class="main-footer">
-      &copy; 2025 Sportovní Výsledky. Všechna práva vyhrazena.
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
-</html>
+  </main>
+{% endblock %}
