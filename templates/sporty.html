@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Sporty{% endblock %}
+
+{% block content %}
+  <header class="main-header">
+    <h1>Sporty</h1>
+  </header>
+
+  <main>
+    <div class="container my-5">
+      
+      <div class="card-box">
+        <h2 class="section-title">Fotbal</h2>
+        <ul class="results-list">
+          <li class="result sport-football" id="football-score-1">FC Barcelona 3 - 0 Real Madrid</li>
+          <li class="result sport-football" id="football-score-2">Manchester City 2 - 2 Arsenal</li>
+          <li class="result sport-football" id="football-score-3">Bayern Mnichov 1 - 1 Borussia Dortmund</li>
+          <li class="result sport-football" id="football-score-4">Juventus 0 - 1 AC Milán</li>
+          <li class="result sport-football" id="football-score-5">Ajax 2 - 3 PSV</li>
+          <li class="result sport-football" id="football-score-6">Sparta Praha 2 - 1 Slavia Praha</li>
+          <li class="result sport-football" id="football-score-7">Inter Milán 3 - 2 Neapol</li>
+          <li class="result sport-football" id="football-score-8">Chelsea 1 - 0 Liverpool</li>
+          <li class="result sport-football" id="football-score-9">Benfica 4 - 2 Porto</li>
+          <li class="result sport-football" id="football-score-10">Galatasaray 2 - 2 Fenerbahçe</li>
+        </ul>
+      </div>
+
+      <div class="card-box">
+        <h2 class="section-title">Hokej</h2>
+        <ul class="results-list">
+          <li class="result sport-hockey" id="hockey-score-1">Toronto Maple Leafs 4 - 2 Boston Bruins</li>
+          <li class="result sport-hockey" id="hockey-score-2">New York Rangers 3 - 5 Chicago Blackhawks</li>
+          <li class="result sport-hockey" id="hockey-score-3">Sparta Praha 2 - 1 Kometa Brno</li>
+          <li class="result sport-hockey" id="hockey-score-4">HC Oceláři Třinec 1 - 3 Litvínov</li>
+          <li class="result sport-hockey" id="hockey-score-5">Plzeň 0 - 4 Mountfield HK</li>
+          <li class="result sport-hockey" id="hockey-score-6">Florida Panthers 5 - 5 Tampa Bay Lightning</li>
+          <li class="result sport-hockey" id="hockey-score-7">Montreal Canadiens 2 - 6 Ottawa Senators</li>
+          <li class="result sport-hockey" id="hockey-score-8">Los Angeles Kings 3 - 3 Vegas Golden Knights</li>
+          <li class="result sport-hockey" id="hockey-score-9">Colorado Avalanche 1 - 2 Dallas Stars</li>
+          <li class="result sport-hockey" id="hockey-score-10">Pardubice 3 - 0 Karlovy Vary</li>
+        </ul>
+      </div>
+
+      <div class="card-box">
+        <h2 class="section-title">Tenis</h2>
+        <ul class="results-list">
+          <li class="result sport-tennis" id="tennis-score-1">N. Djokovic def. C. Alcaraz 7-5, 6-4</li>
+          <li class="result sport-tennis" id="tennis-score-2">I. Swiatek def. A. Sabalenka 6-2, 6-3</li>
+          <li class="result sport-tennis" id="tennis-score-3">J. Lehečka def. D. Medvedev 4-6, 7-6, 6-3</li>
+          <li class="result sport-tennis" id="tennis-score-4">R. Nadal def. S. Tsitsipas 6-4, 6-4</li>
+          <li class="result sport-tennis" id="tennis-score-5">E. Rybakina def. J. Pegula 6-3, 7-5</li>
+          <li class="result sport-tennis" id="tennis-score-6">T. Paul def. H. Rune 2-6, 6-4, 6-2</li>
+          <li class="result sport-tennis" id="tennis-score-7">M. Keys def. V. Azarenka 7-6, 6-1</li>
+          <li class="result sport-tennis" id="tennis-score-8">F. Auger-Aliassime def. C. Ruud 3-6, 6-3, 7-5</li>
+          <li class="result sport-tennis" id="tennis-score-9">P. Kvitová def. K. Muchová 6-4, 6-4</li>
+          <li class="result sport-tennis" id="tennis-score-10">D. Thiem def. A. Zverev 6-7, 7-6, 6-4</li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{{ url_for('static', filename='js/score.js') }}"></script>
+  <script>
+    setInterval(updateScores, 15000);
+  </script>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Sportovní Výsledky{% endblock %}
+
+{% block content %}
+  <header class="main-header">
+    <h1>Sportovní Výsledky</h1>
+    <p>Stránka slouží k sledování výsledků jednotlivých sportů. Pro sledování více aktuálních zápasů přejděte na tabulku sporty.</p>
+  </header>
+
+  <main>
+    <div class="container my-5">
+      <div class="latest-results card-box">
+        <h2 class="section-title">Nejnovější Výsledky</h2>
+        <ul class="results-list">
+          <li class="result sport-football">Fotbal: Sparta Praha 2 - 1 Slavia Praha</li>
+          <li class="result sport-hockey">Hokej: HC Kometa Brno 4 - 3 HC Oceláři Třinec</li>
+          <li class="result sport-tennis">Tenis: K. Muchová def. P. Kvitová 6-4, 6-3</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+{% endblock %}
