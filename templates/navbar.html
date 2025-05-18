@@ -1,22 +1,38 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Sázej.to</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Sázej.to</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{{ url_for('main.index') }}">Domů</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == '/sporty' %}active{% endif %}" href="{{ url_for('main.sporty') }}">Sporty</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == '/kontakt' %}active{% endif %}" href="{{ url_for('main.kontakt') }}">Kontakt</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        {% if session.get('user') %}
           <li class="nav-item">
-            <a class="nav-link active" href="/">Domů</a>
+            <span class="navbar-text me-3">Ahoj, {{ session['user'] }}</span>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href='sporty'>Sporty</a>
+            <a class="nav-link" href="{{ url_for('auth.logout') }}">Odhlásit se</a>
+          </li>
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('auth.login') }}">Přihlášení</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="kontakt">Kontakt</a>
+            <a class="nav-link" href="{{ url_for('auth.register') }}">Registrace</a>
           </li>
-        </ul>
-      </div>
+        {% endif %}
+      </ul>
     </div>
-  </nav>
-  
+  </div>
+</nav>
