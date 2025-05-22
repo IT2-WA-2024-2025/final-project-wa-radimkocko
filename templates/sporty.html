@@ -3,6 +3,7 @@
 {% block title %}Sporty{% endblock %}
 
 {% block content %}
+
   <header class="main-header">
     <h1>Sporty</h1>
   </header>
@@ -63,7 +64,7 @@
 {% endblock %}
 
 {% block scripts %}
-  <script src="{{ url_for('static', filename='js/score.js') }}"></script>
+  <script src="static/js/score.js"></script>
   <script>
     setInterval(updateScores, 15000);
   </script>

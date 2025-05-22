@@ -1,20 +1,16 @@
-from flask import Flask
-from auth import auth_bp
-from routes import main_bp
-from models import db
+from flask import Flask  
 
-app = Flask(__name__)
-app.secret_key = 'neco_tajneho'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+from auth import auth_bp  
 
-db.init_app(app)
+from routes import main_bp  
 
-with app.app_context():
-    db.create_all()
+app = Flask(__name__)  
 
-app.register_blueprint(auth_bp)
-app.register_blueprint(main_bp)
+app.secret_key = 'neco_tajneho'  
 
-if __name__ == '__main__':
-    app.run(debug=True)
+app.register_blueprint(auth_bp)  
+
+app.register_blueprint(main_bp)  
+
+if __name__ == '__main__':  
+    app.run(debug=True)  
